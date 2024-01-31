@@ -1,0 +1,60 @@
+*,::after,::before{
+    padding: 0;
+    margin: 0;
+}
+
+
+body{
+    height: 100vh;
+    width: 100%;
+}
+
+
+
+/* Style de base pour la barre de navigation */
+header {
+    padding-top: 30px;
+    padding-left: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Style pour la partie gauche de la barre de navigation (titre et description) */
+.title {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+}
+
+.title h1 {
+    
+    justify-self: center;
+   
+}
+
+/* Style pour la partie droite de la barre de navigation (liste) */
+.nav ul {
+    list-style: none; /* Supprimer les puces de liste par défaut */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap : 3px;
+    align-self: center;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.nav li {
+    margin-right: 20px; /* Espacement entre les éléments de la liste */
+    cursor: pointer; /* Définir le curseur comme pointeur pour indiquer que c'est interactif */
+}
+
+/* Style pour les liens de la liste */
+.nav li a {
+    text-decoration: none; /* Supprimer la décoration de texte par défaut (soulignement) */
+    color: #fff; /* Couleur du texte des liens */
+    font-weight: bold; /* Police en gras pour les liens */
+}
+
+/* Style pour les liens de la liste au survol */
+.nav li a:hover {
+    text-decoration: underline; /* Souligner le texte au survol */
+}
