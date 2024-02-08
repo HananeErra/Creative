@@ -8,7 +8,7 @@ body{
     height: 100vh;
     width: 100%;
     
-        background-image: url('../img/bg.avif'); 
+        background-image: url('../img/photo.jpg'); 
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
@@ -22,6 +22,7 @@ header {
     padding-left: 30px;
     display: flex;
     justify-content: space-around;
+    
 }
 
 /* Style pour la partie gauche de la barre de navigation (titre et description) */
@@ -48,13 +49,14 @@ header {
 }
 
 .nav li {
-    background-color: rgb(255, 255, 255,0.7);
+    
     padding: 10px;
     display: flex;
     justify-content: center;
     margin-right: 20px; 
     cursor: pointer; 
-    box-shadow: rgba(160, 160, 167, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    background: rgba(255, 255, 255, 0.534);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     border-radius:33px;
     transition: all 0.5s;
     &:hover{
@@ -73,4 +75,87 @@ header {
 
 .nav li a:hover {
     text-decoration: underline; 
+}
+
+
+/* section about  */
+
+.about{
+    
+    width: 80%;
+    height: max-content;
+    margin: auto;
+    margin-top: 10%;
+    justify-content: center;
+    padding: 20px 0 20px 0;
+    background: rgba(255, 255, 255, 0.534);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border-radius:13% 87% 24% 76% / 100% 0% 100% 0%  ; 
+    position: relative;
+   
+        --mask:
+          radial-gradient(37.50px at 50% calc(100% - 52.50px),#000 99%,#0000 101%) calc(50% - 60px) 0/120px 100%,
+          radial-gradient(37.50px at 50% calc(100% + 22.50px),#0000 99%,#000 101%) 50% calc(100% - 30px)/120px 100% repeat-x;
+        -webkit-mask: var(--mask);
+                mask: var(--mask);
+    padding-bottom: 50px;
+
+}
+
+#carrousel{
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    width : 100%;
+    height: 100%;
+
+}
+
+
+
+.bouton{
+    
+    width: 70px;
+    cursor:pointer;
+    top: 150px;
+    margin: auto;
+
+    
+}
+
+#g{
+    right:0;
+    opacity: 0.4;
+    transform: rotate(0);
+    &:hover{
+        transform: rotate(0deg) scale(1.1);
+        opacity: 1;
+        transition: all 0.3 ease;
+    }
+}
+
+#d{
+    left:0;
+    opacity: 0.4;
+    transform: rotate(180deg);
+    &:hover{
+        transform: rotate(180deg) scale(1.1);
+        opacity: 1;
+        transition: all 0.3 ease;
+    }
+}
+#container{
+    :first-child{
+        
+        margin-bottom: 20px;
+    }
+   
+}
+.image{
+    width:300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    float: right;
+    shape-outside: margin-box;
+    margin: 0 0 5px 20px;
 }
