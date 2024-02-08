@@ -13,7 +13,7 @@
             <h1>Equipe X </h1>
             <p style="color: rgb(27, 13, 13);">Etudiants master1 Till-A </p>
         </div>
-        <div class="nav style-text">
+        <div class="nav">
             <ul>
                 <li><a href="index.html">Equipe</a></li>
                 <li><a href="content.html">Chat</a></li>
@@ -22,26 +22,18 @@
         </div>
     </header>
 
-    <section class="about">
+    <section id="about">
        <div id="carrousel">
-            <img src="../img/next.png" alt="" class="bouton" onclick="precedent()" id="d">
+            <img src="../img/next.png" alt="" class="bouton" onclick="nextCard(-1)">
             <div id="container">
-                <h2 id="nom">Nicolas le </h2>
-                <img src="../img/flower1.jpg" class="image" id="image" alt="">
-                <p id="paragraphe"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt repellat, impedit, incidunt reiciendis provident mollitia et cumque aliquam a temporibus voluptas, perferendis ratione numquam sed! Et atque, natus tenetur temporibus vitae quod sapiente expedita dicta nobis error, ullam odio veritatis consequuntur laborum omnis repudiandae. Adipisci, perspiciatis eaque maxime officiis beatae animi nulla aperiam eius dolorem hic provident voluptates consectetur, non rem laudantium error, nesciunt at distinctio quia ipsa? Ut qui praesentium commodi ipsam dolores aperiam enim. Suscipit ut doloribus expedita, dolores repellat, nulla aliquam eligendi itaque quo, veritatis debitis adipisci rem quod eveniet? Odit sint maxime dolores possimus vel ducimus? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi, numquam?</p>
-                
+                <h2 id="name"></h2>
+                <img id="image" src="" alt="Une belle image accessible :-)">
+                <p id="content"></p>
             </div>
-            
-            <img src="../img/next.png" alt="" class="bouton" onclick="suivant()" id="g">
-
-
+            <img src="../img/next.png" alt="" class="bouton" onclick="nextCard(1)">
        </div>
-
     </section>
 
-
-<script src="../js/index.js"></script>
+    <script src="../js/index.js"></script>
 </body>
-
-
 </html>
