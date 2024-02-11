@@ -6,7 +6,6 @@
 body{
     height: 100vh;
     width: 100%;
-    background-image: url('../img/photo.jpg'); 
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -62,7 +61,7 @@ header .nav li {
 
 header .nav li a {
     text-decoration: none; 
-    color: #fff; 
+    color: #0f0d0d; 
     font-weight: bold; 
 }
 
