@@ -1,4 +1,87 @@
-#about {
+*,::after,::before{
+    padding: 0;
+    margin: 0;
+}
+
+
+body{
+    height: 100vh;
+    width: 100%;
+    
+        background-image: url('../img/cats.jpg'); 
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover; 
+    
+}
+
+
+header {
+    padding-top: 30px;
+    padding-left: 30px;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+/* Style pour la partie gauche de la barre de navigation (titre et description) */
+.title {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+}
+
+.title h1 {
+    
+    justify-self: center;
+   
+}
+
+
+.nav ul {
+    list-style: none; 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap : 3px;
+    align-self: center;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.nav li {
+    
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    margin-right: 20px; 
+    cursor: pointer; 
+    background: rgba(255, 255, 255, 0.534);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border-radius:33px;
+    transition: all 0.5s;
+    &:hover{
+        transform: scale(1.2);
+        border-color: black;
+    }
+}
+
+
+.nav li a {
+    text-decoration: none; 
+    color: #181313; 
+    font-weight: bold; 
+}
+
+
+.nav li a:hover {
+    text-decoration: underline; 
+}
+
+
+/* section about  */
+
+.about{
+    
     width: 80%;
     height: max-content;
     margin: auto;
@@ -7,38 +90,67 @@
     padding: 20px 0 20px 0;
     background: rgba(255, 255, 255, 0.534);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-    border-radius:13% 87% 24% 76% / 100% 0% 100% 0%;
+    border-radius:13% 87% 24% 76% / 100% 0% 100% 0%  ; 
     position: relative;
+   
+        --mask:
+          radial-gradient(37.50px at 50% calc(100% - 52.50px),#000 99%,#0000 101%) calc(50% - 60px) 0/120px 100%,
+          radial-gradient(37.50px at 50% calc(100% + 22.50px),#0000 99%,#000 101%) 50% calc(100% - 30px)/120px 100% repeat-x;
+        -webkit-mask: var(--mask);
+                mask: var(--mask);
     padding-bottom: 50px;
 
-    --mask:
-        radial-gradient(37.50px at 50% calc(100% - 52.50px),#000 99%,#0000 101%) calc(50% - 60px) 0/120px 100%,
-        radial-gradient(37.50px at 50% calc(100% + 22.50px),#0000 99%,#000 101%) 50% calc(100% - 30px)/120px 100% repeat-x;
-    -webkit-mask: var(--mask);
-    mask: var(--mask);
 }
 
-#carrousel {
+#carrousel{
     display: grid;
     grid-template-columns: 1fr 5fr 1fr;
     width : 100%;
     height: 100%;
+
 }
 
-#carrousel .bouton {    
+
+
+.bouton{
+    
     width: 70px;
     cursor:pointer;
     top: 150px;
-    margin: auto;    
+    margin: auto;
+
+    
 }
 
-#container {
-    :first-child{
-        margin-bottom: 20px;
+#g{
+    right:0;
+    opacity: 0.4;
+    transform: rotate(0);
+    &:hover{
+        transform: rotate(0deg) scale(1.1);
+        opacity: 1;
+        transition: all 0.3 ease;
     }
 }
 
-#image {
+#d{
+    left:0;
+    opacity: 0.4;
+    transform: rotate(180deg);
+    &:hover{
+        transform: rotate(180deg) scale(1.1);
+        opacity: 1;
+        transition: all 0.3 ease;
+    }
+}
+#container{
+    :first-child{
+        
+        margin-bottom: 20px;
+    }
+   
+}
+.image{
     width:300px;
     height: 300px;
     object-fit: cover;
