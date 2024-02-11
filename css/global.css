@@ -1,5 +1,75 @@
-.style-text{
+*,::after,::before{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background-image: url('../img/photo.jpg'); 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    padding-top: 30px;
+    padding-left: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+header .title {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+}
+
+header .title h1 {
+    justify-self: center;   
+}
+
+header .nav {
     font-size: 20px;
     font-weight: 400;
 }
 
+header .nav ul {
+    list-style: none; 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap : 3px;
+    align-self: center;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+header .nav li {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    margin-right: 20px; 
+    cursor: pointer; 
+    background: rgba(255, 255, 255, 0.534);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border-radius:33px;
+    transition: all 0.5s;
+    &:hover{
+        transform: scale(1.2);
+        border-color: black;
+    }
+}
+
+header .nav li a {
+    text-decoration: none; 
+    color: #fff; 
+    font-weight: bold; 
+}
+
+header .nav li a:hover {
+    text-decoration: underline; 
+}
+
+.jumbotron {
+    background-color:rgba(200, 200, 200, 0.75);
+}
