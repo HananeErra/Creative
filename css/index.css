@@ -8,7 +8,7 @@ body{
     height: 100vh;
     width: 100%;
     
-        background-image: url('../img/photo.jpg'); 
+        background-image: url('../img/cats.jpg'); 
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
@@ -68,7 +68,7 @@ header {
 
 .nav li a {
     text-decoration: none; 
-    color: #fff; 
+    color: #181313; 
     font-weight: bold; 
 }
 
